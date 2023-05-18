@@ -1,0 +1,28 @@
+.MainCanvas {
+	oncontextmenu: return false;
+	display: inline-block;
+	cursor: grab;
+}
+.MainCanvas:active {
+	cursor: grabbing;
+}
+.hover-div {
+	background-color: blue;
+	display: flex;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+}
+.texter {
+	position: fixed;
+    left: 10px;
+    top: 10px;
+	width: 60%;
+	display: none;
+}
+#xml_text {
+	height: 400px;
+    width: 100%;
+	background-color: black;
+    color: green;
+}
