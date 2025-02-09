@@ -41,7 +41,7 @@ document.getElementById("parseMe").onclick = function(event) {
 	checkWires(arrayObjects);
 	screen = new Screen(arrayObjects, canv);
 	listener.objects = arrayObjects;
-	ticker = setInterval(function() { tick(); }, 1000 / 60)
+	ticker = setInterval(function() { tick(); }, 1000 / 60);
 }
 
 xhttp.onreadystatechange = function() {
