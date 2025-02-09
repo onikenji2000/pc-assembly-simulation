@@ -1,7 +1,7 @@
 var canv = document.getElementById("MainCanvas");
 var screen = null;
-var objArr = [];
-var listener = new MouseListener(canv, objArr);
+var arrayObjects = [];
+var listener = new MouseListener(canv, arrayObjects);
 var ticker = null;
 var parser = new DOMParser();
 var docer = '';
@@ -33,14 +33,14 @@ document.getElementById("parseMe").onclick = function(event) {
 	
 	if(ticker) clearInterval(ticker);
 	screen = null;
-	objArr = [];
+	arrayObjects = [];
 	
 	docer = xmlDoc.getElementsByTagName('components')[0];
 	removeWhitespace(docer);
-	addFromXML(docer, objArr);
-	checkWires(objArr);
-	screen = new Screen(objArr, canv);
-	listener.objects = objArr;
+	addFromXML(docer, arrayObjects);
+	checkWires(arrayObjects);
+	screen = new Screen(arrayObjects, canv);
+	listener.objects = arrayObjects;
 	ticker = setInterval(function() { tick(); }, 1000 / 60)
 }
 
@@ -50,14 +50,14 @@ xhttp.onreadystatechange = function() {
 		let xmlDoc = parser.parseFromString(docStr, 'text/xml');
 		
 		if(ticker) clearInterval(ticker);
-		objArr = [];
+		arrayObjects = [];
 		
 		docer = xmlDoc.getElementsByTagName('components')[0];
 		removeWhitespace(docer);
-		addFromXML(docer, objArr);
-		checkWires(objArr);
-		screen = new Screen(objArr, canv);
-		listener.objects = objArr;
+		addFromXML(docer, arrayObjects);
+		checkWires(arrayObjects);
+		screen = new Screen(arrayObjects, canv);
+		listener.objects = arrayObjects;
 		ticker = setInterval(function() { tick(); }, 1000 / 60)
 	}
 }
