@@ -1,4 +1,5 @@
 class MouseListener {
+	//Declaration of values for MouseListener
 	constructor(canvas, objects) {
 		this.canvas = canvas;
 		this.objects = objects;
