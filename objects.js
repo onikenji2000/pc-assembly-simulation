@@ -18,6 +18,7 @@ class ComputerPart {
 		this.id = 'blank';
 	}
 }
+
 class MountPoint {
 	constructor(x, y, width, height) {
 		this.type = 'mountpoint';

@@ -10,19 +10,6 @@ var xhttp = new XMLHttpRequest();
 canv.width = (window.innerWidth - 120);
 canv.height = (window.innerHeight - 10);
 
-// document.getElementById('xml_text').value = "<components>\n<parts>\n<type></type>\n<src></src>\n<width></width>\n<height></height>\n</parts>\n</components>";
-// document.getElementById('magnify').onclick = function(event) {
-	// let lit = document.getElementsByClassName('texter')[0];
-	// switch(lit.style.display) {
-		// case 'none':
-		// case '':
-		// lit.style.display = 'block';
-		// break;
-		// case 'block':
-		// lit.style.display = 'none';
-	// }
-// }
-
 document.getElementById("btnSubmit").onclick = function(event) {
 	window.close();
 }
