@@ -79,6 +79,7 @@ function removeWhitespace(xml) {
 		}
 	}
 }
+
 function tick() {
 	screen.repaint();
 	let timer = localStorage.getItem('timer');
@@ -87,6 +88,7 @@ function tick() {
 	if(secs < 10) secs = '0' + secs;
 	timerdoc.innerHTML = 'Timer: ' + mins + ':' + secs;
 }
+
 xhttp.open("GET", "images/data.xml", true);
 xhttp.send();
 localStorage.setItem('simDataAnswer', '');
