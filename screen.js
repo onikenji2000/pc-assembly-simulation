@@ -49,6 +49,7 @@ class Screen {
 		}
 		ctx.translate(-x, -y);
 	}
+	
 	traverse(ctx, stack, offsetX = 0, offsetY = 0) {
 		let arr = stack.pop();
 		for(let i = 0; i < arr.length; i++) {
