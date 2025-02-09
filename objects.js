@@ -38,10 +38,10 @@ class MountPoint {
 
 //This function checks the mountpoints if they are connecting with each other
 function checkMount(listen) {
-	let top = objArr[objArr.length - (1 + listen.wireNodes.length)];
+	let top = arrayObjects[arrayObjects.length - (1 + listen.wireNodes.length)];
 	let bottom = null;
-	for(var i =  0; i < objArr.length - 1; i++) {
-		let bot = objArr[i];
+	for(var i =  0; i < arrayObjects.length - 1; i++) {
+		let bot = arrayObjects[i];
 		let botX = bot.X + bot.width;
 		let topX = top.X + top.width;
 		let botY = bot.Y + bot.height;
@@ -142,7 +142,7 @@ function magnet(grabObj) {
 					else break;
 				}
 				pmt.splice(index, 0, grabObj);
-				objArr.pop();
+				arrayObjects.pop();
 				grabObj.parent = parent;
 				grabObj.hovered = false;
 				hasofst = true;
@@ -188,7 +188,7 @@ function removeMount(parent, mouseX, mouseY, offsetX = 0, offsetY = 0) {
 			curobj.X = parent.X + curobj.X + offsetX;
 			curobj.Y = parent.Y + curobj.Y + offsetY;
 			zmount = curobj.id;
-			objArr.push(curobj);
+			arrayObjects.push(curobj);
 			
 			removable = true;
 			
@@ -289,10 +289,10 @@ function checkLayers(layers) {
 
 //Rearrange the objects that are on top of another object
 function rearrangeObjects(first) {
-	for(let i = 0; i < objArr.length; i++) {
-		if(objArr[i] == first) {
-			objArr.splice(i, 1);
-			objArr.push(first);
+	for(let i = 0; i < arrayObjects.length; i++) {
+		if(arrayObjects[i] == first) {
+			arrayObjects.splice(i, 1);
+			arrayObjects.push(first);
 		}
 	}
 }
