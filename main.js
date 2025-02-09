@@ -28,8 +28,8 @@ document.getElementById("btnSubmit").onclick = function(event) {
 }
 
 document.getElementById("parseMe").onclick = function(event) {
-	let docStr = document.getElementById('xml_text').value;
-	let xmlDoc = parser.parseFromString(docStr, 'text/xml');
+	let stringDocument = document.getElementById('xml_text').value;
+	let xmlDoc = parser.parseFromString(stringDocument, 'text/xml');
 	
 	if(ticker) clearInterval(ticker);
 	screen = null;
@@ -46,8 +46,8 @@ document.getElementById("parseMe").onclick = function(event) {
 
 xhttp.onreadystatechange = function() {
 	if(this.readyState == 4 && this.status == 200) {
-		let docStr = this.responseText;
-		let xmlDoc = parser.parseFromString(docStr, 'text/xml');
+		let stringDocument = this.responseText;
+		let xmlDoc = parser.parseFromString(stringDocument, 'text/xml');
 		
 		if(ticker) clearInterval(ticker);
 		objArr = [];
