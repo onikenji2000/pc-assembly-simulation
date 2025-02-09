@@ -69,11 +69,9 @@ class Screen {
 						ctx.bezierCurveTo(lineStack.X + lineStack.mountPoint.x + (lineStack.mountPoint.width / 2), offsetY + arr[i].Y + mountpts[z].y + (mountpts[z].height / 2),
 						                  offsetX + arr[i].X + mountpts[z].x + (mountpts[z].width / 2), lineStack.Y + lineStack.mountPoint.y + (lineStack.mountPoint.height),
 										  lineStack.X + lineStack.mountPoint.x + (lineStack.mountPoint.width / 2), lineStack.Y + lineStack.mountPoint.y + (lineStack.mountPoint.height));
-						//ctx.lineTo(lineStack.X + lineStack.mountPoint.x + (lineStack.mountPoint.width / 2), lineStack.Y + lineStack.mountPoint.y + (lineStack.mountPoint.height));
 						ctx.stroke();
 						ctx.lineWidth = lineWidth;
 						ctx.strokeStyle = strokeStyle;
-						//mIndex = this.lineStack.findIndex(obj => obj.mountPoint === mountpts[z].connectedTo[1]);
 						this.lineStack.splice(mIndex, 1);
 					}
 					else {
