@@ -4,7 +4,6 @@ class Screen {
 		this.canvas = canvas;
 		this.lineStack = [];
 	}
-	
 	repaint() {
 		let ctx = this.canvas.getContext("2d");
 		
@@ -23,7 +22,6 @@ class Screen {
 		ctx.lineTo(1, 1);
 		ctx.stroke();
 	}
-	
 	drawObject(ctx, obj, offX, offY) {
 		let x = obj.X + offX;
 		let y = obj.Y + offY;
