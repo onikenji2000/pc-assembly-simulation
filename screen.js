@@ -11,13 +11,6 @@ class Screen {
 		this.lineStack = [];
 		ctx.clearRect(0, 0, canv.width, canv.height);
 		
-		// ctx.beginPath();
-		// ctx.moveTo(canv.width / 2, 0);
-		// ctx.lineTo(canv.width / 2, canv.height);
-		// ctx.moveTo(0, canv.height / 2);
-		// ctx.lineTo(canv.width, canv.height / 2);
-		// ctx.stroke();
-		
 		let stack = [];
 		stack.push(this.objects);
 		this.traverse(ctx, stack);
