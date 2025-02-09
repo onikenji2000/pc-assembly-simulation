@@ -97,7 +97,7 @@ class MouseListener {
 		let butIn = listener.holdButtons.indexOf(but);
 		listener.holdButtons.splice(butIn)
 		if(but == 0 && listener.isGrabbing) {
-			let topObj = objArr[objArr.length - 1];
+			let topObj = arrayObjects[arrayObjects.length - 1];
 			listener.isGrabbing = false;
 			rearrangeObjects(listener.grabbedObject);
 			magnet(listener.grabbedObject);
